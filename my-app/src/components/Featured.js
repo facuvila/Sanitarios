@@ -1,21 +1,23 @@
 import React from "react";
 import Product from "./Product";
-
+import '../App.css';
 function Featured() {
     const [products, setProducts] = React.useState([]);
 
     React.useEffect(() => {
         fetch(`https://dummyjson.com/products`)
         .then(res => res.json())
-        .then(res => setProducts(res.products))
+        .then(res => {
+            setProducts(res.products)
+        })
         .catch(err => console.error(err));
     }, []);
 
     return (
         <div className="content-body">
-            { products.map(product => {
-                product.id <= 6 ? <Product key={product.id} product={product} /> : null
-            }) }
+            <div class="flexbox-container">
+                { products.map(product => <Product key={product.id} product={product} />) }
+            </div>
         </div>
     );
 }
