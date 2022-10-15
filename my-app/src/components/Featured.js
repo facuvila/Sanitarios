@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-
+import config from '../config'
 function Featured() {
     const [products, setProducts] = React.useState([]);
 
@@ -13,8 +13,10 @@ function Featured() {
 
     return (
         <div className="content-body">
-            { products.map(product => {
-                product.id <= 6 ? <Product key={product.id} product={product} /> : null
+            { products.map((product) => {
+                if(product.id <= config.featuredQuantity) {
+                    return <Product key={product.id} product={product} />
+                }
             }) }
         </div>
     );

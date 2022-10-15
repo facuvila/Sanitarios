@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./Product";
 
-const Products = () => {
+function Products() {
     const [products, setProducts] = React.useState([]);
 
     React.useEffect(() => {
@@ -13,7 +13,6 @@ const Products = () => {
 
     return (
         <div className="content-body">
-            { products.map(product => <Product key={product.id} product={product} />) }
             { products.map(product => <Product key={product.id} product={product} />) }
         </div>
     );
