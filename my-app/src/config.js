@@ -1,6 +1,7 @@
 const config = {
-    featuredQuantity: 10,
-    companyName: 'Supermercado Ilacu'
+    featuredQuantity: 6,
+    companyName: 'Supermercado Ilacu',
+    ePerCol: 3
 }
 
 export default config

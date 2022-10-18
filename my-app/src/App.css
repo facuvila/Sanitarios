@@ -49,6 +49,9 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -80%);
+  font-size: 60px;
+  color: black;
+  text-shadow: #FFF 0px 0 10px;
 }
 
 .flexbox-container {

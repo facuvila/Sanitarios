@@ -5,15 +5,13 @@ import './NavBar.css';
 function navBar() {
   return (
     <div>
-      <img src="./Logo.png"/>
+      <h1>TIENDA</h1>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Sedes</a>
-        <a href="#">Portefolio</a>
-        <a href="#">Contact</a>
+        <a href="/">Home</a>
+        <a href="/Products">Productos</a>
         <div class="animation start-home"></div>
       </nav>
+      <br/>
     </div>
   )
 }

@@ -1,14 +1,13 @@
 import Gallery from "../components/Carousel";
 import ProductList from '../components/ProductList';
-import config from '../config'
 
-function Home() {
+function Products() {
     return (
         <div className="content-body">
-           <Gallery/>
-           <ProductList quantity={config.featuredQuantity}/>
+            <h1>TODOS LOS PRODUCTOS</h1>
+           <ProductList quantity={30}/>
         </div>
     )
 }
 
-export default Home;
+export default Products;

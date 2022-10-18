@@ -1,27 +1,39 @@
 import './App.css';
+import React, {useState, useEffect} from "react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './screens/Home';
-<<<<<<< HEAD
-import Products from "./components/Products";
+import Products from "./screens/Products";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-=======
 import Detalle from './screens/DetalleProducto';
->>>>>>> de96b64023a4c3e1465ab5dea7b1fc49ae7e704a
+
+export const productsContext = React.createContext();
 
 function App() {
+  const [products, setProducts] = useState([])
+  //Se obtienen los productos de la API:
+  useEffect(() => {
+    fetch(`https://dummyjson.com/products`)
+    .then(res => res.json())
+    .then(res => {
+        setProducts(res.products)
+    })
+    .catch(err => console.error(err));
+  }, []);
+
+  if(!products) return <div>Cargando datos...</div>;
+
   return (
     <div className="App">
       <BrowserRouter>
         <NavBar/>
-        <Routes>
-            <Route index path="/" element={<Home />}/>
-<<<<<<< HEAD
-            <Route path="/Products" element={<Products />}/>
-=======
-            <Route path="DetalleProducto" element={<Detalle />} />
->>>>>>> de96b64023a4c3e1465ab5dea7b1fc49ae7e704a
-        </Routes>
+        <productsContext.Provider value={products}>
+          <Routes>
+              <Route index path="/" element={<Home />}/>
+              <Route path="/Products" element={<Products />} />
+              <Route path="/DetalleProducto/:id" element={<Detalle />} />
+          </Routes>
+        </productsContext.Provider>
         <Footer/>
         
       </BrowserRouter>

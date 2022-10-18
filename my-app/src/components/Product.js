@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 
 function Product({product}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ minWidth: 350, maxWidth:350 }}>
       <CardMedia
         component="img"
         height="140"
@@ -23,7 +23,7 @@ function Product({product}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button href="DetealleProducto" size="small">Ver detalles</Button>
+        <Button href={'/DetalleProducto/' + product.id} size="small">Ver detalles</Button>
       </CardActions>
     </Card>
   );
