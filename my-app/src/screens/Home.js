@@ -5,7 +5,8 @@ import config from '../config'
 function Home() {
     return (
         <div className="content-body">
-           <Gallery/>
+           <Gallery />
+           <h1 style={{paddingTop: 30}}>Productos Destacados</h1>
            <ProductList quantity={config.featuredQuantity}/>
         </div>
     )

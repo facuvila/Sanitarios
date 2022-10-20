@@ -58,3 +58,8 @@
   display: flex;
   flex-direction: row;
 }
+
+.productsContainer {
+  margin-left: auto;
+  margin-right: auto;
+}

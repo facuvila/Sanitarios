@@ -2,18 +2,20 @@ import React, {useContext} from "react";
 import Product from "./Product";
 import '../App.css';
 import {productsContext} from '../App.js'
-import { Box } from "@mui/system";
+import {Box, Grid} from '@mui/material';
 
 function ProductList(quantity) {
     let products = useContext(productsContext);
     if(products) {
         return (
-            <Box flexWrap="wrap" display="flex" style={{maxWidth: 1050}}>
-            { products.map((product) => {
-                if(product.id <= quantity.quantity) {
-                    return <Product key={product.id} product={product} />
-                }
-            }) }
+            <Box sx={{ flexGrow: 4 }}>
+            <Grid container spacing={1} rowSpacing={3.5}>
+                { products.map((product) => {
+                    if(product.id <= quantity.quantity) {
+                        return <Grid item xs={4}> <Product key={product.id} product={product} /></Grid>
+                    }
+                }) }
+            </Grid>
             </Box>
         );
     } else {

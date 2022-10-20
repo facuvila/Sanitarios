@@ -35,7 +35,6 @@ function App() {
           </Routes>
         </productsContext.Provider>
         <Footer/>
-        
       </BrowserRouter>
     </div>
   );
