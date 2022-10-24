@@ -1,4 +1,3 @@
-import Gallery from "../components/Carousel";
 import ProductList from '../components/ProductList';
 
 function Products() {

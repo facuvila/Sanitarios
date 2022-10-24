@@ -1,14 +1,36 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
+import './Footer.css'
 
 function footer() {
   return (
-    <div>
-      <h1 style={{paddingTop: 60}}>Marcas Colaboradoras</h1>
-      <Image style={{width: 250, height:250, marginRight: 1500}}src="https://logodownload.org/wp-content/uploads/2016/09/tcl-logo-0.png" />
-      <Image style={{width: 400, height:250, marginRight: 200, marginTop: -500}}src="https://logos-marques.com/wp-content/uploads/2021/02/Motorola-logo.png" />
-      <Image style={{width: 250, height:250, marginRight: 900, marginTop: -500}}src="https://logolook.net/wp-content/uploads/2021/06/Samsung-Logo-1993-2048x1152.png" />
-    </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>Sobre nosotros:</h6>
+            <p class="text-justify">Trabajo realizado por <i>Ilan Raijel y Facundo Vilamowski</i>.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Links rápidos</h6>
+            <ul class="footer-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/Products">Todos los productos</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr></hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by <a href="#">Ilan R & Facundo V</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }
 

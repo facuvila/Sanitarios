@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import {productsContext} from '../App.js'
+import Product from "../components/Product.js";
 
 function Detalle() {
     let { id } = useParams();
@@ -13,9 +14,7 @@ function Detalle() {
         if(product) {
             return (
                 <div className="content-body">
-                    <p>Nombre del producto: {product.title}</p>
-                    <p>Precio: ${product.price}</p>
-                    <p>Marca: {product.brand}</p>
+                    <Product key={product.id} product={product} />
                 </div>
             );
         }
