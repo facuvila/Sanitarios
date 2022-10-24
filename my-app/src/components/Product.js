@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import { useParams } from "react-router-dom";
 
 function Product({product}) {
-  console.log(product)
   let { id } = useParams();
   if(id) {
     return (

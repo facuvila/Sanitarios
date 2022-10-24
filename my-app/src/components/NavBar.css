@@ -21,6 +21,7 @@ nav a {
 	color: white;
 	cursor: pointer;
 }
+
 nav .animation {
 	position: absolute;
 	height: 100%;
@@ -29,9 +30,11 @@ nav .animation {
 	transition: all .5s ease 0s;
 	border-radius: 8px;
 }
+
 a:nth-child(1) {
 	width: 100px;
 }
+
 a:nth-child(2) {
 	width: 110px;
 }
@@ -41,6 +44,7 @@ nav .start-home, a:nth-child(1):hover~.animation {
 	left: 0;
 	background-color: #1abc9c;
 }
+
 nav .start-about, a:nth-child(2):hover~.animation {
 	width: 110px;
 	left: 100px;
