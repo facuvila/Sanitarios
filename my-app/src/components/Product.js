@@ -27,8 +27,7 @@ function Product({product}) {
           </Typography>
           <Typography variant="body2" color="text.secondary">
               Marca: {product.brand} <br></br>
-              Descripción: 
-              {product.description}
+              Descripción: {product.description}
           </Typography>
         </CardContent>
       </Card>

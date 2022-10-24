@@ -15,9 +15,9 @@ function ProductList(quantity) {
                         return <Grid item xs={4}> <Product key={product.id} product={product} /></Grid>
                     }
                 }) }
-            </Grid>
+            </Grid><br></br><br></br><br></br>
             </Box>
-        );
+        ); 
     } else {
         return "Cargando...";
     }

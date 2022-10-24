@@ -14,7 +14,7 @@ function Detalle() {
         if(product) {
             return (
                 <div className="content-body">
-                    <Product key={product.id} product={product} />
+                    <Product key={product.id} product={product} /> <br></br><br></br><br></br>
                 </div>
             );
         }

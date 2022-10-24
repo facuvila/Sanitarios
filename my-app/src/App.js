@@ -11,7 +11,7 @@ export const productsContext = React.createContext();
 
 function App() {
   const [products, setProducts] = useState([])
-  //Se obtienen los productos de la API:
+  //Trae los productos de la API:
   useEffect(() => {
     fetch(`https://dummyjson.com/products`)
     .then(res => res.json())

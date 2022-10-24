@@ -10,8 +10,9 @@ function navBar() {
       <nav>
         <a href="/">Home</a>
         <a href="/Products">Productos</a>
-        <div class="animation "></div>
-      </nav>
+        <div class="animation start "></div>
+
+      </nav><br></br>
       <br/>
     </div>
   )
