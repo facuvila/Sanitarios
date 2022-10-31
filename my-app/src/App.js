@@ -6,6 +6,8 @@ import Products from "./screens/Products";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Detalle from './screens/DetalleProducto';
+import Contacto from './screens/Contacto';
+
 
 export const productsContext = React.createContext();
 
@@ -32,6 +34,7 @@ function App() {
               <Route index path="/" element={<Home />}/>
               <Route path="/Products" element={<Products />} />
               <Route path="/DetalleProducto/:id" element={<Detalle />} />
+              <Route path="/Contacto" element={<Contacto />} />
           </Routes>
         </productsContext.Provider>
         <Footer/>
