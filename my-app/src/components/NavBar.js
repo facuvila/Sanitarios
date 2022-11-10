@@ -14,15 +14,23 @@ function navBar() {
         <a href="/">Home</a>
         <a href="/Products">Productos</a>
         <a href="/Contacto">Contacto</a>
+        <a href="/SobreNosotros">AboutUs</a>
+        <a href="/Carrito">Carrito</a>
+        <a href="/ContactosGuardados">Contactos</a>
         {
           currentURL == "http://localhost:3000/Products" ?
-          <div class="animation start-about"></div> :
+          <div class="animation start-products"></div> :
           currentURL == "http://localhost:3000/Contacto" ?
           <div class="animation start-contactos"></div> :
+          currentURL == "http://localhost:3000/SobreNosotros" ?
+          <div class="animation start-about"></div> :
+          currentURL == "http://localhost:3000/Carrito" ?
+          <div class="animation start-carrito"></div> :
+          currentURL == "http://localhost:3000/ContactosGuardados" ?
+          <div class="animation start-contactosGuardados"></div> :
           <div class="animation start-home"></div>
         }
       </nav><br></br>
-      <a href='Carrito'><Image style={{width: 100, height: 100, paddingTop: 20, textAlign: 'right', marginLeft: 800}}src= "https://prints.ultracoloringpages.com/c1cbabf9b2ef871625b94b55d8897cc4.png"/></a>
       <br/>
     </div>
   )
