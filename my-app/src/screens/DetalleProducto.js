@@ -5,7 +5,7 @@ import Product from "../components/Product.js";
 
 function Detalle() {
     let { id } = useParams();
-    let products = useContext(productsContext);
+    let {products, setProducts} = useContext(productsContext);
 
     if(products) {
         let product = products.find(product => {
@@ -14,7 +14,7 @@ function Detalle() {
         if(product) {
             return (
                 <div className="content-body">
-                    <Product key={product.id} product={product} /> <br></br><br></br><br></br>
+                    <Product key={product.id} product={product} products={products} setProducts={setProducts} />
                 </div>
             );
         }

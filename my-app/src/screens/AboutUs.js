@@ -1,6 +1,10 @@
 function AboutUs() {
   return (
-    <h1>SOMOS UNA EMPRESA</h1>
+    <div>
+      <h1>Garbarino tecnología</h1>
+      <h3>Nos dedicamos a la venta de productos</h3>
+      <h4>By Ilan Raijel y Facundo Vilamowski</h4>
+    </div>
   );
 }
 
