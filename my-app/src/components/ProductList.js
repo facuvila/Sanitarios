@@ -16,7 +16,7 @@ function ProductList(quantity) {
                         return <Grid item xs={4}> <Product key={product.id} product={product} products={products} setProducts={setProducts}/></Grid>
                     }
                 }) }
-            </Grid><br></br><br></br><br></br>
+            </Grid>
             </Box>
         ); 
     } else {

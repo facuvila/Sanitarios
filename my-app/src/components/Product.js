@@ -5,9 +5,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Badge } from '@mui/material';
-
+import { ProductShape } from '../shapes/product';
 
 function addToCarrito(products, setProducts, id) {
   let aux = products
@@ -41,12 +41,12 @@ function Product({product, products, setProducts}) {
                 ${product.price}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-                Marca: {product.brand} <br></br>
+                Marca: {product.brand}
                 Descripción: {product.description}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button disabled={product.quantity == 0} onClick={() => {removeFromCarrito(products, setProducts, product.id-1); let aux = contador-1; setContador(aux)}} size="small">-</Button>
+            <Button disabled={contador == 0} onClick={() => {removeFromCarrito(products, setProducts, product.id-1); let aux = contador-1; setContador(aux)}} size="small">-</Button>
             {contador}
             <Button onClick={() => {addToCarrito(products, setProducts, product.id-1); let aux = contador+1; setContador(aux)}} size="small">+</Button>
           </CardActions>
@@ -71,8 +71,8 @@ function Product({product, products, setProducts}) {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button href={'/DetalleProducto/' + product.id} size="small">Ver detalles</Button>
-            <Button disabled={product.quantity == 0} onClick={() => {removeFromCarrito(products, setProducts, product.id-1); let aux = contador-1; setContador(aux)}} size="small">-</Button>
+            <Link to={'/DetalleProducto/' + product.id}>Ver detalles</Link>
+            <Button disabled={contador == 0} onClick={() => {removeFromCarrito(products, setProducts, product.id-1); let aux = contador-1; setContador(aux)}} size="small">-</Button>
             {contador}
             <Button onClick={() => {addToCarrito(products, setProducts, product.id-1); let aux = contador+1; setContador(aux)}} size="small">+</Button>
           </CardActions>
@@ -80,6 +80,10 @@ function Product({product, products, setProducts}) {
       </Badge>
     );
   }
+}
+
+Product.propTypes = {
+  product: ProductShape.isRequired
 }
 
 export default Product;

@@ -16,8 +16,7 @@ function navBar() {
         <a><Link to={"/Contacto"}>Contacto</Link></a>
         <a><Link to={"/SobreNosotros"}>Nosotros</Link></a>
         <a><Link to={"/Carrito"}>Carrito</Link></a>
-        <a><Link to={"/ContactosGuardados"}>Contactos</Link></a>
-      </nav><br></br>
+      </nav>
       <br/>
     </div>
   )

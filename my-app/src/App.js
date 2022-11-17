@@ -21,7 +21,7 @@ function App() {
     fetch(`https://dummyjson.com/products`)
     .then(res => res.json())
     .then(res => {
-        setProducts(res.products)
+      setProducts(res.products)
     })
     .catch(err => console.error(err));
   }, []);
